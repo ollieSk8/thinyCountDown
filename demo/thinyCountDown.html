@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>thinyCountDown</title>
+	<script type="text/javascript" src="../jquery-2.2.3.min.js"></script>
+	<script type="text/javascript" src="../thinyCountDown.js"></script>
+</head>
+<body>
+	<div id="time"></div>
+	<script type="text/javascript">
+		var timer=new thinyCountDown({
+		  	el:document.getElementById('time'),
+			startTimeStamp:'august 12, 2016 15:00:00',
+			endTimeStamp:'august 13, 2018 15:00:00',
+			onEnd:function(){
+				console.log('倒计时结束');
+			},
+			render:function(date){
+				$(this.el).append(
+					'<div>'+
+						'距离august 13, 2018 15:00:00剩余'+date.day+'天'+date.hour+'小时'+date.min+'分'+date.sec+'秒'+
+					'</div>'
+				);
+			}
+		});
+	</script>
+</body>
+</html>
