@@ -1,4 +1,4 @@
-# thinyCountDown
+#ThinyCountDown
 
 thinyCountDown is a thiny plugin to render countdowns.
 
